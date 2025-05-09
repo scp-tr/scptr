@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SCP Foundation - Güvenli. Sakla. Koru.</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Courier New', monospace;
+      background-color: #111;
+      color: #eee;
+    }
+    header {
+      background-color: #222;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 2px solid red;
+    }
+    h1 {
+      margin: 0;
+      color: #e00;
+    }
+    nav {
+      background-color: #333;
+      padding: 10px;
+      text-align: center;
+    }
+    nav button {
+      background: #444;
+      color: #eee;
+      border: none;
+      padding: 10px 20px;
+      margin: 5px;
+      cursor: pointer;
+    }
+    nav button:hover {
+      background-color: #e00;
+    }
+    section {
+      padding: 20px;
+      display: none;
+    }
+    section.active {
+      display: block;
+    }
+    .scp-entry {
+      border: 1px solid #555;
+      padding: 15px;
+      margin: 20px 0;
+      background-color: #1a1a1a;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #222;
+      color: #999;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>SCP FOUNDATION TR</h1>
+    <p><em>Güvenli. Sakla. Koru.</em></p>
+  </header>
+
+  <nav>
+    <button onclick="showSection('about')">Hakkında</button>
+    <button onclick="showSection('entries')">SCP Kayıtları</button>
+    <button onclick="showSection('contact')">İletişim</button>
+  </nav>
+
+  <section id="about" class="active">
+    <h2>Kuruluş Hakkında</h2>
+    <p>SCP Foundation, anormal varlıkları ve olayları kontrol altına alarak insanlığı korumayı amaçlayan gizli bir organizasyondur. Varlıklar 'SCP' olarak numaralandırılır ve saklanır. Biz SCP Foundation konulu bir server açtık, burada RP yapıyoruz.</p>
+  </section>
+
+  <section id="entries">
+    <h2>SCP Kayıtları</h2>
+    <div class="scp-entry">
+      <h3>SCP-173 - Heykel</h3>
+      <p><strong>Durum:</strong> Güvenli</p>
+      <p>SCP-173, organik olmayan maddelerden oluşan bir heykeldir. Doğrudan göz teması kesildiğinde anında hareket eder ve öldürücü güce sahiptir.</p>
+    </div>
+    <div class="scp-entry">
+      <h3>SCP-096 - Utangaç İnsan</h3>
+      <p><strong>Durum:</strong> Euclid</p>
+      <p>SCP-096, yüzü görüldüğünde son derece saldırgan hale gelen bir varlıktır. Fotoğraf ya da video da bu tepkiyi tetikleyebilir.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>İletişim</h2>
+    <p>Bu site hakkımızda bilgi vermek amacıyla yapılmıştır.</p>
+    <p>Resmi Discord Adresimiz: <a href="discord.gg/scptr" target="_blank" style="color: #e00;">scpwiki.com</a></p>
+  </section>
+
+  <footer>
+    © 2025 discord.gg/scptr - Tüm Hakları Saklıdır.
+  </footer>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('section').forEach(section => {
+        section.classList.remove('active');
+      });
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+</body>
+</html>
